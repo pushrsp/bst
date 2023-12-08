@@ -87,6 +87,19 @@ class BSTTest {
         //then
     }
 
+    @Test
+    public void can_delete_value() throws Exception {
+        //given
+        BST<Integer> bst = getBst();
+        bst.delete(14);
+
+        //when
+        Integer max = bst.max();
+
+        //then
+        assertThat(max).isEqualTo(13);
+    }
+
     private BST<Integer> getBst() {
         BST<Integer> bst = new BST<>();
         for (int i = 0; i < arr.length; i++) {

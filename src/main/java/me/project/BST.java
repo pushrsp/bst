@@ -46,7 +46,7 @@ public class BST<T extends Comparable<T>> {
             if(Objects.isNull(node.getLeft())) {
                 return node.getRight();
             } else if(Objects.isNull(node.getRight())) {
-                return node.getRight();
+                return node.getLeft();
             }
 
             node.setData(maxRec(node.getLeft()));
